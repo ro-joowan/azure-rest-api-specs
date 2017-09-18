@@ -3,7 +3,7 @@
   "info": {
     "title": "DataLakeStoreAccountManagementClient",
     "description": "Creates an Azure Data Lake Store account management client.",
-    "version": "2016-11-01",
+    "version": "2017-10-01",
     "x-ms-code-generation-settings": {
       "internalConstructors": true
     }
@@ -67,7 +67,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the firewall rule to create or update."
+            "maxLength": -1,
+            "description": "The name of the firewall rule to create or update. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -320,7 +321,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
+            "maxLength": -1,
+            "description": "The name of the trusted identity provider. This is used for differentiation of providers in the account. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -559,14 +561,16 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the Azure resource group that contains the Data Lake Store account."
+            "maxLength": -1,
+            "description": "The name of the Azure resource group that the Data Lake Store account will be associated with. Maximum length: _ characters."
           },
           {
             "name": "name",
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the Data Lake Store account to create."
+            "maxLength": -1,
+            "description": "The name of the Data Lake Store account to create. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -803,7 +807,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData filter. Optional."
+            "maxLength": -1,
+            "description": "OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -828,14 +833,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -881,7 +888,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData filter. Optional."
+            "maxLength": -1,
+            "description": "OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -906,14 +914,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -1007,7 +1017,8 @@
       "properties": {
         "idProvider": {
           "type": "string",
-          "description": "The URL of this trusted identity provider"
+          "maxLength": -1,
+          "description": "The URL of this trusted identity provider. Maximum length: _ characters."
         }
       },
       "description": "Data Lake Store trusted identity provider property update information"
@@ -1029,7 +1040,8 @@
       "properties": {
         "idProvider": {
           "type": "string",
-          "description": "The URL of this trusted identity provider"
+          "maxLength": -1,
+          "description": "The URL of this trusted identity provider. Maximum length: _ characters."
         }
       },
       "description": "Data Lake Store trusted identity provider properties information"
@@ -1152,15 +1164,18 @@
       "properties": {
         "keyVaultResourceId": {
           "type": "string",
-          "description": "The resource identifier for the user managed Key Vault being used to encrypt."
+          "maxLength": -1,
+          "description": "The resource identifier for the user managed Key Vault being used to encrypt. Maximum length: _ characters."
         },
         "encryptionKeyName": {
           "type": "string",
-          "description": "The name of the user managed encryption key."
+          "maxLength": -1,
+          "description": "The name of the user managed encryption key. Maximum length: _ characters."
         },
         "encryptionKeyVersion": {
           "type": "string",
-          "description": "The version of the user managed encryption key."
+          "maxLength": -1,
+          "description": "The version of the user managed encryption key. Maximum length: _ characters."
         }
       },
       "description": "Metadata information used by account encryption."
@@ -1178,7 +1193,8 @@
       "properties": {
         "encryptionKeyVersion": {
           "type": "string",
-          "description": "The version of the user managed encryption key to update through a key rotation."
+          "maxLength": -1,
+          "description": "The version of the user managed encryption key to update through a key rotation. Maximum length: _ characters."
         }
       },
       "description": "The Key Vault update information used for user managed key rotation."
@@ -1384,7 +1400,7 @@
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Resource tags"
+          "description": "Resource tags. Maximum key or value length: _ characters. Maximum count: _ tags."
         },
         "properties": {
           "$ref": "#/definitions/UpdateDataLakeStoreAccountProperties",
@@ -1556,7 +1572,7 @@
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Resource tags"
+          "description": "Resource tags. Maximum key or value length: _ characters. Maximum count: _ tags."
         }
       },
       "required": [

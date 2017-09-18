@@ -3,7 +3,7 @@
   "info": {
     "title": "DataLakeAnalyticsAccountManagementClient",
     "description": "Creates an Azure Data Lake Analytics account management client.",
-    "version": "2016-11-01",
+    "version": "2017-10-01",
     "x-ms-code-generation-settings": {
       "internalConstructors": true
     }
@@ -67,7 +67,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the compute policy to create or update."
+            "maxLength": -1,
+            "description": "The name of the compute policy to create or update. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -76,7 +77,7 @@
             "schema": {
               "$ref": "#/definitions/ComputePolicyCreateOrUpdateParameters"
             },
-            "description": "Parameters supplied to create or update the compute policy. The max degree of parallelism per job property, min priority per job property, or both must be present."
+            "description": "Parameters supplied to create or update the compute policy. The maximum number of Analytics Units (AUs) per job property, min priority per job property, or both must be present."
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -320,7 +321,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the firewall rule to create or update."
+            "maxLength": -1,
+            "description": "The name of the firewall rule to create or update. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -573,7 +575,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the Azure Storage account to add"
+            "maxLength": -1,
+            "description": "The name of the Azure Storage account to add. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -939,7 +942,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the Data Lake Store account to add."
+            "maxLength": -1,
+            "description": "The name of the Data Lake Store account to add. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -1084,7 +1088,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "The OData filter. Optional."
+            "maxLength": -1,
+            "description": "The OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -1109,14 +1114,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -1176,7 +1183,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData filter. Optional."
+            "maxLength": -1,
+            "description": "OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -1201,14 +1209,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -1261,7 +1271,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData filter. Optional."
+            "maxLength": -1,
+            "description": "OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -1286,14 +1297,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -1339,7 +1352,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData filter. Optional."
+            "maxLength": -1,
+            "description": "OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -1364,14 +1378,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -1417,14 +1433,16 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the Azure resource group that contains the Data Lake Analytics account.the account will be associated with."
+            "maxLength": -1,
+            "description": "The name of the Azure resource group that the Data Lake Analytics account will be associated with. Maximum length: _ characters."
           },
           {
             "name": "accountName",
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the Data Lake Analytics account to create."
+            "maxLength": -1,
+            "description": "The name of the Data Lake Analytics account to create. Maximum length: _ characters."
           },
           {
             "name": "parameters",
@@ -1612,7 +1630,8 @@
         },
         "suffix": {
           "type": "string",
-          "description": "the optional suffix for the storage account."
+          "maxLength": -1,
+          "description": "the optional suffix for the storage account. Maximum length: _ characters."
         }
       },
       "description": "Azure Storage account properties information."
@@ -1625,7 +1644,8 @@
         },
         "suffix": {
           "type": "string",
-          "description": "the optional suffix for the storage account."
+          "maxLength": -1,
+          "description": "the optional suffix for the storage account. Maximum length: _ characters."
         }
       },
       "description": "Azure Storage account properties information to update."
@@ -1734,7 +1754,8 @@
       "properties": {
         "suffix": {
           "type": "string",
-          "description": "the optional suffix for the Data Lake Store account."
+          "maxLength": -1,
+          "description": "the optional suffix for the Data Lake Store account. Maximum length: _ characters."
         }
       },
       "description": "Data Lake Store account properties information."
@@ -1805,12 +1826,12 @@
           "type": "string",
           "description": "the default data lake storage account associated with this Data Lake Analytics account."
         },
-        "maxDegreeOfParallelism": {
+        "maxAnalyticsUnits": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
           "default": 30,
-          "description": "the maximum supported degree of parallelism for this account."
+          "description": "the maximum supported number of Analytics Units (AUs) for this account."
         },
         "queryStoreRetention": {
           "type": "integer",
@@ -1827,11 +1848,11 @@
           "default": 3,
           "description": "the maximum supported jobs running under the account at the same time."
         },
-        "systemMaxDegreeOfParallelism": {
+        "systemMaxAnalyticsUnits": {
           "type": "integer",
           "format": "int32",
           "readOnly": true,
-          "description": "the system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.."
+          "description": "the system defined maximum supported number of Analytics Units (AUs) for this account, which restricts the maximum value of Analytics Units (AUs) the user can set for the account.."
         },
         "systemMaxJobCount": {
           "type": "integer",
@@ -1923,11 +1944,11 @@
           },
           "description": "The list of firewall rules associated with this Data Lake Analytics account."
         },
-        "maxDegreeOfParallelismPerJob": {
+        "maxAnalyticsUnitsPerJob": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "description": "the maximum supported degree of parallelism per job for this account."
+          "description": "the maximum supported number of Analytics Units (AUs) per job for this account."
         },
         "minPriorityPerJob": {
           "type": "integer",
@@ -1947,11 +1968,11 @@
     },
     "UpdateDataLakeAnalyticsAccountProperties": {
       "properties": {
-        "maxDegreeOfParallelism": {
+        "maxAnalyticsUnits": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "description": "the maximum supported degree of parallelism for this account."
+          "description": "the maximum supported number of Analytics Units (AUs) for this account."
         },
         "queryStoreRetention": {
           "type": "integer",
@@ -2016,11 +2037,11 @@
           },
           "description": "The list of firewall rules associated with this Data Lake Analytics account."
         },
-        "maxDegreeOfParallelismPerJob": {
+        "maxAnalyticsUnitsPerJob": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "description": "the maximum supported degree of parallelism per job for this account."
+          "description": "the maximum supported number of Analytics Units (AUs) per job for this account."
         },
         "minPriorityPerJob": {
           "type": "integer",
@@ -2091,17 +2112,17 @@
             "modelAsString": true
           }
         },
-        "maxDegreeOfParallelismPerJob": {
+        "maxAnalyticsUnitsPerJob": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "description": "The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed."
+          "description": "The maximum number of Analytics Units (AUs) per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed."
         },
         "minPriorityPerJob": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "description": "The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed."
+          "description": "The minimum priority per job this user can use to submit jobs. This property, the max Analytics Units (AUs) per job property, or both must be passed."
         }
       },
       "required": [
@@ -2127,7 +2148,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "The unique name of the policy to create"
+          "maxLength": -1,
+          "description": "The unique name of the policy to create. Maximum length: _ characters."
         },
         "properties": {
           "$ref": "#/definitions/ComputePolicyPropertiesCreateParameters",
@@ -2163,11 +2185,11 @@
             "modelAsString": true
           }
         },
-        "maxDegreeOfParallelismPerJob": {
+        "maxAnalyticsUnitsPerJob": {
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "description": "The maximum degree of parallelism per job this user can use to submit jobs."
+          "description": "The maximum number of Analytics Units (AUs) per job this user can use to submit jobs."
         },
         "minPriorityPerJob": {
           "type": "integer",
@@ -2218,7 +2240,7 @@
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Resource tags"
+          "description": "Resource tags. Maximum key or value length: _ characters. Maximum count: _ tags."
         },
         "properties": {
           "$ref": "#/definitions/UpdateDataLakeAnalyticsAccountProperties",
@@ -2448,7 +2470,7 @@
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Resource tags"
+          "description": "Resource tags. Maximum key or value length: _ characters. Maximum count: _ tags."
         }
       },
       "required": [

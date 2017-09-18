@@ -3,7 +3,7 @@
   "info": {
     "title": "DataLakeAnalyticsJobManagementClient",
     "description": "Creates an Azure Data Lake Analytics job client.",
-    "version": "2017-09-01-preview",
+    "version": "2017-10-01",
     "x-ms-code-generation-settings": {
       "useDateTimeOffset": true,
       "internalConstructors": true
@@ -522,7 +522,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData filter. Optional."
+            "maxLength": -1,
+            "description": "OData filter. Optional. Maximum length: _ characters."
           },
           {
             "name": "$top",
@@ -547,14 +548,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+            "maxLength": -1,
+            "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional. Maximum length: _ characters."
           },
           {
             "name": "$orderby",
             "in": "query",
             "required": false,
             "type": "string",
-            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "maxLength": -1,
+            "description": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional. Maximum length: _ characters."
           },
           {
             "name": "$count",
@@ -1086,7 +1089,7 @@
         },
         "script": {
           "type": "string",
-          "description": "the script to run. Please note that the maximum script size is 3 MB."
+          "description": "the script to run. Maximum size: _ MB."
         },
         "type": {
           "type": "string",
@@ -1324,11 +1327,12 @@
         "pipelineName": {
           "type": "string",
           "maxLength": 260,
-          "description": "the friendly name of the job relationship pipeline, which does not need to be unique."
+          "description": "the friendly name of the job relationship pipeline, which does not need to be unique. Maximum length: _ characters."
         },
         "pipelineUri": {
           "type": "string",
-          "description": "the pipeline uri, unique, links to the originating service for this pipeline."
+          "maxLength": -1,
+          "description": "the pipeline uri, unique, links to the originating service for this pipeline. Maximum length: _ characters."
         },
         "runId": {
           "type": "string",
@@ -1343,7 +1347,7 @@
         "recurrenceName": {
           "type": "string",
           "maxLength": 260,
-          "description": "the recurrence name, user friendly name for the correlation between jobs."
+          "description": "the recurrence name, user friendly name for the correlation between jobs. Maximum length: _ characters."
         }
       },
       "required": [
@@ -1379,7 +1383,6 @@
         },
         "pipelineName": {
           "type": "string",
-          "maxLength": 260,
           "readOnly": true,
           "description": "the friendly name of the job relationship pipeline, which does not need to be unique."
         },
@@ -1555,7 +1558,7 @@
           "additionalProperties": {
             "type": "string"
           },
-          "description": "the key-value pairs used to add additional metadata to the job information. (Only for use internally with Scope job type.)"
+          "description": "the key-value pairs used to add additional metadata to the job information. Maximum key or value length: _ characters. Maximum count: _ tags. (Only for use internally with Scope job type.)"
         }
       },
       "description": "The parameters used to submit a new Data Lake Analytics Scope job. (Only for use internally with Scope job type.)"
@@ -1569,13 +1572,14 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "the friendly name of the job to submit."
+          "maxLength": -1,
+          "description": "the friendly name of the job to submit. Maximum length: _ characters."
         },
-        "degreeOfParallelism": {
+        "analyticsUnits": {
           "type": "integer",
           "default": 1,
           "format": "int32",
-          "description": "the degree of parallelism to use for this job. This must be greater than 0, if set to less than 0 it will default to 1."
+          "description": "the number of Analytics Units (AUs) to use for this job. This must be greater than 0, if set to less than 0 it will default to 1."
         },
         "priority": {
           "type": "integer",
@@ -1608,7 +1612,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "the friendly name of the job to build."
+          "maxLength": -1,
+          "description": "the friendly name of the job to build. Maximum length: _ characters."
         }
       },
       "description": "The parameters used to build a new Data Lake Analytics job."
@@ -1669,11 +1674,11 @@
           "readOnly": true,
           "description": "the user or account that submitted the job."
         },
-        "degreeOfParallelism": {
+        "analyticsUnits": {
           "type": "integer",
           "default": 1,
           "format": "int32",
-          "description": "the degree of parallelism used for this job. This must be greater than 0, if set to less than 0 it will default to 1."
+          "description": "the number of Analytics Units (AUs) used for this job. This must be greater than 0, if set to less than 0 it will default to 1."
         },
         "priority": {
           "type": "integer",
@@ -1817,10 +1822,10 @@
     },
     "UpdateJobParameters": {
       "properties": {
-        "degreeOfParallelism": {
+        "analyticsUnits": {
           "type": "integer",
           "format": "int32",
-          "description": "the degree of parallelism used for this job. This must be greater than 0, if set to less than 0 it will default to 1."
+          "description": "the number of Analytics Units (AUs) to use for this job. This must be greater than 0, if set to less than 0 it will default to 1."
         },
         "priority": {
           "type": "integer",
@@ -1832,7 +1837,7 @@
           "additionalProperties": {
             "type": "string"
           },
-          "description": "the key-value pairs used to add additional metadata to the job information. (Only for use internally with Scope job type.)"
+          "description": "the key-value pairs used to add additional metadata to the job information. Maximum key or value length: _ characters. Maximum count: _ tags. (Only for use internally with Scope job type.)"
         }
       },
       "description": "The parameters that can be used to update existing Data Lake Analytics job information properties. (Only for use internally with Scope job type.)"
