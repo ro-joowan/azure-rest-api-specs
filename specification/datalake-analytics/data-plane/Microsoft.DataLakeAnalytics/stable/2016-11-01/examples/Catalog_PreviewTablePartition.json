@@ -1,0 +1,34 @@
+{
+  "parameters": {
+    "api-version": "2016-11-01",
+    "accountName": "contosoadla",
+    "adlaCatalogDnsSuffix": "azuredatalakeanalytics.net",
+    "databaseName": "master",
+    "schemaName": "dbo",
+    "tableName": "test_table_name",
+    "partitionName": "test_partition_name"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "rowCount": 1,
+        "columnCount": 2,
+        "totalRowCount": 1,
+        "totalColumnCount": 2,
+        "rows": [
+          [
+            "value_a",
+            "value_b"
+          ]
+        ],
+        "truncated": false,
+        "schema": [
+          {
+            "columnName": "test_column_name",
+            "dataType": "test_data_type"
+          }
+        ]
+      }
+    }
+  }
+}
