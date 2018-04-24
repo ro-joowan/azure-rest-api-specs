@@ -3737,7 +3737,7 @@
               "type": "string"
             }
           },
-          "description": "the preview rows for table or partition where each row is represented as an array of strings for each column value."
+          "description": "the rows of the table or partition preview, where each row is an array of string representations the row's values. Note: Byte arrays will appear as base-64 encoded values, SqlMap and SqlArray objects will appear as escaped JSON objects, and DateTime objects will appear as ISO formatted UTC date-times."
         },
         "truncated": {
           "type": "boolean",
