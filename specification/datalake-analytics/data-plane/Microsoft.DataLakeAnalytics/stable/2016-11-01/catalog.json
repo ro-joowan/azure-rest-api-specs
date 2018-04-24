@@ -3741,7 +3741,7 @@
         },
         "truncated": {
           "type": "boolean",
-          "description": "true if the number of rows/columns in the response is less than the requested number of rows/columns."
+          "description": "true if the amount of data in the response is less than expected due to the preview operation's size limitations. This can occur if the requested rows or row counts are too large."
         },
         "schema": {
           "type": "array",
